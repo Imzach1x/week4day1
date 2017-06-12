@@ -27,7 +27,7 @@ It should return new year's day for 2018.
 ( function() {
   "use strict";
 
-  var date = new Date("January 1, 2018");
+  var date = new Date(2018, 0, 1);
 
 console.log( "Happy new year!: ", date );
 console.assert( date == "Thu Feb 01 2018 00:00:00 GMT-0400 (EDT)", "#2: Test failed. Check the parameters. Returned: " + date )
@@ -211,12 +211,12 @@ Where should 'multiply()' go?
 
   function hoistThis() {
     function multiply( sum ) {
-      return sum * 2;
+    return sum * 2;
+    console.assert( sum * 2 == "8", "#9: Test failed. Check your function hoisting" );
     }
     multiply( sum );
     var sum;
     sum = 2 + 2;
-    console.assert( sum * 2 == "8", "#9: Test failed. Check your function hoisting" );
     console.assert( sum == "4", "#9: Test failed. Check hoisting" );
   };
   hoistThis();
