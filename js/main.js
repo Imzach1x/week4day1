@@ -137,7 +137,7 @@ The following object is empty. Use bracket notation so that 'car' has two doors,
 
 car['doors'] = '2';
 car['wheels'] = '4';
-car['engine'] = 'true';
+car['engine'] = true;
 car['type'] = 'sport';
 car['engine-size'] = 'v-8';
 car['model'] = 'mustang';
